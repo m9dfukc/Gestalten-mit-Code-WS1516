@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/res/values/strings.xml -->
+    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">androidEmptyExample</string>
-    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/build/intermediates/exploded-aar/androidEmptyExample/ofAndroidLib/unspecified/res/values/values.xml -->
+    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/build/intermediates/exploded-aar/emptyExample_android/ofAndroidLib/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="hello">Hello World!</string>
-    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/res/values/strings.xml -->
+    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/res/values/strings.xml -->
     <eat-comment/>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/res/values/styles.xml -->
+    <!-- From: file:/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

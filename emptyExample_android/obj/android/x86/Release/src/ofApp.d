@@ -1,6 +1,6 @@
 obj/android/x86/Release/src/ofApp.o: \
- /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/src/ofApp.cpp \
- /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/src/ofApp.h \
+ /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/src/ofApp.cpp \
+ /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/src/ofApp.h \
  /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/libs/openFrameworks/ofMain.h \
  /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/libs/openFrameworks/utils/ofConstants.h \
  /usr/local/Cellar/android-ndk/r10e/sources/cxx-stl/gnu-libstdc++/4.9/include/typeinfo \
@@ -578,7 +578,7 @@ obj/android/x86/Release/src/ofApp.o: \
  /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/addons/ofxAndroid/src/ofxAndroidApp.h \
  /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/addons/ofxAndroid/src/ofxAndroidUtils.h
 
-/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/examples/android/androidEmptyExample/src/ofApp.h:
+/Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/apps/udk-ws-1516/emptyExample_android/src/ofApp.h:
 
 /Users/m9dfukc/Entwicklung/Openframeworks/of_v0.9.0RC2_android_release/libs/openFrameworks/ofMain.h:
 
