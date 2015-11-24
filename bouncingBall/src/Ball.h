@@ -13,15 +13,21 @@
 
 class Ball {
 public:
-    float posX;
-    float posY;
+    
+    ofPoint position;
+    ofPoint direction;
     float speed;
     
+    Ball();
     void setup(float x, float y, float s);
     void update();
     void draw();
     
+    void flipDirectionX();
+    void flipDirectionY();
     
+    void setPosition(float x, float y);
+    ofPoint getPosition();
 };
 
 #endif /* Ball_hpp */

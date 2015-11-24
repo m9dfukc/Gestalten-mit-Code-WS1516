@@ -8,17 +8,39 @@
 
 #include "Ball.h"
 
+Ball::Ball() {
+    
+    position = ofPoint(0.0, 0.0);
+    direction = ofPoint(ofRandomf(), ofRandomf());
+    speed = 1;
+}
+
 void Ball::setup(float x, float y, float s) {
-    posX = x;
-    posY = y;
+    position.set(x, y);
     speed = s;
 }
 
 void Ball::update() {
-    posX += speed;
+    position += direction * speed;
 }
 
 void Ball::draw() {
     ofBackground(0, 0, 0);
-    ofDrawCircle(posX, posY, 10);
+    ofDrawCircle(position, 10);
+}
+
+void Ball::flipDirectionX() {
+    direction.x *= -1;
+}
+void Ball::flipDirectionY() {
+    direction.y *= -1;
+}
+
+void Ball::setPosition(float x, float y) {
+    position.set(x, y);
+    direction.set(ofRandomf(), ofRandomf());
+}
+
+ofPoint Ball::getPosition() {
+    return position;
 }
