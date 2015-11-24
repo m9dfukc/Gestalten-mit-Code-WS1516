@@ -12,6 +12,7 @@ public:
     ofxOscSender sender;
     ofxOscReceiver receiver;
     Ball ball;
+    
     void setup();
     void update();
     void draw();

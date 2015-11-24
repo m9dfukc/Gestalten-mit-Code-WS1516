@@ -3,7 +3,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ball.setup(100, 100, 5);
+    ball.init(100, 100, 5);
     cout << ball.position.x << endl;
     
     sender.setup(HOST, PORT);
@@ -13,7 +13,6 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    
     ofPoint position = ball.getPosition();
     if (position.x <= 0 || position.x >= ofGetWindowWidth()) {
         
@@ -37,7 +36,6 @@ void ofApp::update(){
     }
     
     ball.update();
-    
     
     
     // check for waiting messages
