@@ -2,8 +2,12 @@
 
 #include "ofMain.h"
 #include "ofxOsc.h"
-#include "Ball.h"
+#include "UniqueBall.h"
 
+// define constants for use with OSC
+// note: we're using the UDK network address here,
+// you'll propably have to adapt the ip address to your local network
+// for example 192.168.1.255
 #define HOST "194.95.203.255"
 #define PORT 12345
 
@@ -11,7 +15,8 @@ class ofApp : public ofBaseApp{
 public:
     ofxOscSender sender;
     ofxOscReceiver receiver;
-    Ball ball;
+    UniqueBall ball;
+    
     
     void setup();
     void update();
