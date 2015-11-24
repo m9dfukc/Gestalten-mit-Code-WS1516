@@ -9,19 +9,18 @@
 #include "Ball.h"
 
 Ball::Ball() {
-    
     position = ofPoint(0.0, 0.0);
-    direction = ofPoint(ofRandomf(), ofRandomf());
+    velocity = ofPoint(ofRandomf(), ofRandomf());
     speed = 1;
 }
 
-void Ball::setup(float x, float y, float s) {
+void Ball::init(float x, float y, float s) {
     position.set(x, y);
     speed = s;
 }
 
 void Ball::update() {
-    position += direction * speed;
+    position += velocity * speed; // operator overloading
 }
 
 void Ball::draw() {
@@ -30,15 +29,19 @@ void Ball::draw() {
 }
 
 void Ball::flipDirectionX() {
-    direction.x *= -1;
+    velocity.x *= -1; // operator overloading
 }
 void Ball::flipDirectionY() {
-    direction.y *= -1;
+    velocity.y *= -1; // operator overloading
 }
 
 void Ball::setPosition(float x, float y) {
     position.set(x, y);
-    direction.set(ofRandomf(), ofRandomf());
+    velocity.set(ofRandomf(), ofRandomf());
+}
+
+void Ball::setPosition(ofPoint p) {
+    setPosition(p.x, p.y);
 }
 
 ofPoint Ball::getPosition() {
