@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxOsc.h"
 #include "UniqueBall.h"
+#include "ofxGui.h"
 
 // define constants for use with OSC
 // note: we're using the UDK network address here,
