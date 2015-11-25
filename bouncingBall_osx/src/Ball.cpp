@@ -24,7 +24,6 @@ void Ball::update() {
 }
 
 void Ball::draw() {
-    ofBackground(235, 235, 235);
     ofDrawCircle(position, 10);
 }
 

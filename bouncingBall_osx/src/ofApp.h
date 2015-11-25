@@ -4,6 +4,7 @@
 #include "ofxOsc.h"
 #include "UniqueBall.h"
 #include "ofxGui.h"
+#include <vector>
 
 // define constants for use with OSC
 // note: we're using the UDK network address here,
@@ -18,6 +19,7 @@ public:
     ofxOscReceiver receiver;
     UniqueBall ball;
     
+    std::vector<UniqueBall> oscBalls;
     
     void setup();
     void update();

@@ -27,6 +27,7 @@ public:
     float speed;
     
     Ball();
+
     void init(float x=0, float y=0, float s=1); // we use default params here
     void update();
     void draw();

@@ -9,6 +9,7 @@ void ofApp::setup(){
     // initialize OSC sender and broadcast to the whole network
     sender.setup(HOST, PORT);
     sender.enableBroadcast();
+    
     // initialize OSC receiver on the same port as the sender
     receiver.setup(PORT);
 }
@@ -23,6 +24,7 @@ void ofApp::update(){
     if (position.y <= 0 || position.y >= ofGetWindowHeight()) {
         ball.flipDirectionY();
     }
+    
     // call update of the ball object every frame!!
     ball.update();
     
@@ -35,7 +37,9 @@ void ofApp::update(){
     m.addStringArg(ball.uuid);
     m.addFloatArg(position.x);
     m.addFloatArg(position.y);
+    
     sender.sendMessage(m);
+    
     
     // here we receive the ids and positions of the other 'balls' in the network,
     // right now we just print these to the console ... we'll add the `draw` functionality
@@ -50,7 +54,25 @@ void ofApp::update(){
             float oscPositionY = m.getArgAsFloat(2);
             
             if (oscBallId != ball.uuid) { // don not log out 'local' ball to the console!
-                cout << "Ball " << oscBallId << " has position " << oscPositionX << "/" << oscPositionY << endl;
+                
+                bool ballExists;
+                
+                for(int i=0; i < oscBalls.size(); i++) {
+                    ballExists = (oscBalls[i].uuid == oscBallId);
+                    if (ballExists) {
+                        oscBalls[i].setPosition(oscPositionX, oscPositionY);
+                        break;
+                    }
+                }
+                
+                if (!ballExists) {
+                    UniqueBall oscBall;
+                    oscBall.init();
+                    oscBall.uuid = oscBallId;
+                    oscBall.color = ofColor(128, 128, 128);
+                    oscBall.setPosition(oscPositionX, oscPositionY);
+                    oscBalls.push_back(oscBall);
+                }
             }
         }
     }
@@ -58,7 +80,13 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofBackground(235, 235, 235);
+    
     // call the draw function of our ball object
+    for(int i=0; i < oscBalls.size(); i++) {
+        oscBalls[i].draw();
+    }
+    
     ball.draw();
 }
 

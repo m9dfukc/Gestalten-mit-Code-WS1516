@@ -11,6 +11,7 @@
 UniqueBall::UniqueBall() {
     Ball();
     uuid = UUIDGenerator::defaultGenerator().create().toString();
+    cout << uuid << endl;
     color = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
 }
 
